@@ -1,0 +1,76 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #cce3f0; /* pastelno plava */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #9fc5e8;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar h1 {
+    margin: 0;
+    color: #00334e;
+}
+
+.form-container {
+    background-color: #f0f8ff;
+    width: 90%;
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    color: #00334e;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="email"] {
+    padding: 10px;
+    border: 1px solid #a0c4ff;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.checkbox-container {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container label {
+    margin-left: 8px;
+    color: #00334e;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #7eb6ff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #5fa4ff;
+}

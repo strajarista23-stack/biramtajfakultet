@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiramTajFakultet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>BiramTajFakultet</h1>
+    </nav>
+
+    <div class="form-container">
+        <form id="projectForm">
+            <label for="ime">Ime:</label>
+            <input type="text" id="ime" name="ime" placeholder="Unesi ime" required>
+
+            <label for="prezime">Prezime:</label>
+            <input type="text" id="prezime" name="prezime" placeholder="Unesi prezime" required>
+
+            <label for="datum">Datum rođenja:</label>
+            <input type="date" id="datum" name="datum" required>
+
+            <label for="telefon">Broj telefona:</label>
+            <input type="tel" id="telefon" name="telefon" placeholder="Unesi broj telefona" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Unesi email adresu" required>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="uslovi" name="uslovi" required>
+                <label for="uslovi">Slažem se sa uslovima korišćenja</label>
+            </div>
+
+            <button type="submit">Potvrdi</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
