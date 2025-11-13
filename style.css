@@ -1,76 +1,140 @@
+/* Општи стилови */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #cce3f0; /* pastelno plava */
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('13.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.navbar {
-    background-color: #9fc5e8;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+/* Навбар */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #e63946; /* светло црвена */
+  color: white;
+  padding: 15px 30px;
 }
 
-.navbar h1 {
-    margin: 0;
-    color: #00334e;
+nav img {
+  position: absolute;
+  left: 20px;
+  height: 150px;
+  width: auto;
 }
 
-.form-container {
-    background-color: #f0f8ff;
-    width: 90%;
-    max-width: 400px;
-    margin: 40px auto;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+nav h1 {
+  font-family: 'Georgia', serif;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
 }
 
+/* Главни садржај */
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Форма */
 form {
-    display: flex;
-    flex-direction: column;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 700px;
+  color: #ffffff;
+}
+
+h2 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
 label {
-    margin-top: 10px;
-    color: #00334e;
-    font-weight: 500;
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
 }
 
-input[type="text"],
-input[type="date"],
-input[type="tel"],
-input[type="email"] {
-    padding: 10px;
-    border: 1px solid #a0c4ff;
-    border-radius: 5px;
-    margin-top: 5px;
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 5px;
+  font-size: 1rem;
 }
 
-.checkbox-container {
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
+input[type="radio"] {
+  width: auto;
+  margin-right: 5px;
 }
 
-.checkbox-container label {
-    margin-left: 8px;
-    color: #00334e;
+.radio-group label {
+  margin-right: 15px;
 }
 
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Дугме */
 button {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #7eb6ff;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 15px;
+  width: 100%;
 }
 
 button:hover {
-    background-color: #5fa4ff;
+  background-color: #d62839;
+}
+
+/* Остало */
+.note {
+  font-size: 0.85rem;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.message {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.info-text {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+@media(max-width: 600px) {
+  form {
+    padding: 20px;
+  }
+
+  nav h1 {
+    font-size: 1.4rem;
+  }
 }

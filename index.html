@@ -1,42 +1,102 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BiramTajFakultet</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бирам тај факултет</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <h1>BiramTajFakultet</h1>
-    </nav>
+  <nav>
+    <img src="logo.png" alt="Logo">
+    <h1>Бирам тај факултет</h1>
+  </nav>
 
-    <div class="form-container">
-        <form id="projectForm">
-            <label for="ime">Ime:</label>
-            <input type="text" id="ime" name="ime" placeholder="Unesi ime" required>
+  <div class="container">
+    <form id="registration-form">
+      <h2>Пријава</h2>
 
-            <label for="prezime">Prezime:</label>
-            <input type="text" id="prezime" name="prezime" placeholder="Unesi prezime" required>
+      <label>Мејл адреса</label>
+      <input type="email" name="mejl" placeholder="example@mail.com" required>
 
-            <label for="datum">Datum rođenja:</label>
-            <input type="date" id="datum" name="datum" required>
+      <label>Име и презиме</label>
+      <input type="text" name="ime" placeholder="име и презиме" required>
 
-            <label for="telefon">Broj telefona:</label>
-            <input type="tel" id="telefon" name="telefon" placeholder="Unesi broj telefona" required>
+      <label>Број телефона</label>
+      <input type="text" name="telefon" placeholder="+381##..." required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Unesi email adresu" required>
+      <label>Датум рођења</label>
+      <input type="date" name="datum_rodjenja" required>
 
-            <div class="checkbox-container">
-                <input type="checkbox" id="uslovi" name="uslovi" required>
-                <label for="uslovi">Slažem se sa uslovima korišćenja</label>
-            </div>
+      <label>Пол</label>
+      <div class="radio-group">
+        <label><input type="radio" name="pol" value="Мушки" required> Мушки</label>
+        <label><input type="radio" name="pol" value="Женски" required> Женски</label>
+      </div>
 
-            <button type="submit">Potvrdi</button>
-        </form>
-    </div>
+      <label>Средња школа коју похађаш</label>
+      <input type="text" name="skola" required>
 
-    <script src="script.js"></script>
+      <label>Разред</label>
+      <div class="radio-group">
+        <label><input type="radio" name="razred" value="I" required> I</label>
+        <label><input type="radio" name="razred" value="II" required> II</label>
+        <label><input type="radio" name="razred" value="III" required> III</label>
+        <label><input type="radio" name="razred" value="IV" required> IV</label>
+      </div>
+
+      <label>Одељење</label>
+      <input type="text" name="odeljenje">
+
+      <label>Број телефона родитеља/старатеља</label>
+      <input type="text" name="telefon_roditelja" placeholder="+381##..." required>
+
+      <label>Посебне напомене (алергије, хроничне болести)</label>
+      <textarea name="napomene"></textarea>
+
+      <label>Имена и презимена особа са којима желиш да будеш у соби</label>
+      <textarea name="osobe_soba"></textarea>
+
+      <label>Предавања којих факултета би волео да послушаш</label>
+      <textarea name="predavanja"></textarea>
+
+      <label>Поред предавања, шта би желео да видиш на конференцији</label>
+      <textarea name="aktivnosti"></textarea>
+
+      <label>Особa преко које се пријављујеш </label>
+      <input type="text" name="osoba_prijava" placeholder="име и презиме" required>
+
+      <p class="info-text">
+        Добро дошли, велико нам је задовољство што сте овде.<br><br>
+
+Пре него што потврдите своју пријаву слањем овог формулара, молимо вас да пажљиво прочитате писмо којим желимо да вам скренемо
+ пажњу на неке ствари које би вам могле бити корисне, и које од вас очекујемо, како бисмо заједно остварили циљ конференције и
+  уживали у времену проведеном на конференцији.<br><br>
+ - Посећујте предавања. Истакнути предавачи су својим присуством подржали ову конферецију. Они су овде да са вама поделе своје
+  искуство како бисте лакше донели битну одлуку. Искористите ту прилику, сигурно ћете чути нешто што ће вам бити интересантно
+   и подстаћи вас на размишљање.
+  На овај начин ћете подржати наш рад и омогућити да и наредних година доводимо добре предаваче и развијамо пројекат.<br><br>
+
+- Сигурност је на првом месту. Ваши родитељи очекују да водимо рачуна о вама, али то не можемо да постигнемо ако сте сами непажљиви.
+ Молимо вас да чувате себе и водите рачуна о својим другарима првенствено због себе, али и због својих родитеља и нас.<br><br>
+
+- Не заборавите да нисмо на одмору. Радионице су ту да се упознате, подигнете расположење и научите нешто о себи и тимском раду.
+ Ако их тако схватите биће вам интересантније да сагледате своје и туђа понашања у задатим ситуацијама и тако научите нешто о себи.
+  Уложите енергију, нека ваше присуство буде вредност коју сви делегати добијају.<br><br>
+
+-Организациони тим чине ваши вршњаци који су много енергије уложили у овај пројекат и одговорни су за његову реализацију и све делегате.
+ Поштовањем наведених сугестија одаћете признање за њихов рад и омогућити да се и они лепо проведу током конференције. Организациони тим
+  ће за вас бити доступан у сваком тренутку у случају да вам је потребна помоћ било које врсте или одговор на неко питање.<br><br>
+ 
+Желимо вам успешан рад и пријатан боравак на конференцији.
+      </p>
+
+      <button type="submit">Проследи</button>
+      <div class="note">*Кликни само једном</div>
+      <div class="message" id="success-message"></div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
