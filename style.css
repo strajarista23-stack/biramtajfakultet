@@ -11,7 +11,7 @@ body {
 /* Навбар */
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Razdvaja logo i naslov */
   align-items: center;
   position: relative;
   background-color: #e63946; /* светло црвена */
@@ -20,9 +20,7 @@ nav {
 }
 
 nav img {
-  position: absolute;
-  left: 20px;
-  height: 150px;
+  height: 100px; /* Manja veličina loga */
   width: auto;
 }
 
@@ -30,6 +28,8 @@ nav h1 {
   font-family: 'Georgia', serif;
   font-size: 1.8rem;
   letter-spacing: 1px;
+  text-align: center;
+  flex-grow: 1; /* Omogućava naslovu da se širi i zauzima preostali prostor */
 }
 
 /* Главни садржај */
@@ -129,12 +129,27 @@ button:hover {
   color: #ffffff;
 }
 
+/* Media query za mobilne uređaje */
 @media(max-width: 600px) {
-  form {
-    padding: 20px;
+  /* Navbar - promena rasporeda na manjim ekranima */
+  nav {
+    flex-direction: column; /* Prebaci navbar u vertikalni raspored na manjim ekranima */
+    align-items: center; /* Centriraj elemente vertikalno */
+    padding: 10px 20px;
+  }
+
+  nav img {
+    height: 80px; /* Smanji logo na manjim ekranima */
+    margin-bottom: 10px; /* Dodaj razmak između loga i naslova */
   }
 
   nav h1 {
-    font-size: 1.4rem;
+    font-size: 1.4rem; /* Smanji veličinu naslova na mobilnim uređajima */
+    text-align: center;
+    margin-top: 10px; /* Dodaj razmak ako je potrebno */
+  }
+
+  form {
+    padding: 20px; /* Smanji padding oko forme */
   }
 }
